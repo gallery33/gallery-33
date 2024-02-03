@@ -1,0 +1,29 @@
+{{ $icon:= .icon }}
+{{ $fa_icon:= .fa_icon }}
+{{ $style:= .style }}
+{{ $thumbnail_size:= .thumbnail_size }}
+{{ $params:= .page.Params }}
+{{ $url:= .page.RelPermalink }}
+{{ $title:= .page.Title }}
+
+<div class="summary summary-project summary-{{ $style }} {{ if $params.thumbnail }}summary-has-thumbnail{{ end }} {{ if and $icon $fa_icon }}summary-has-icon{{ end }}">
+
+  {{ with $params.thumbnail }}
+    <div class="summary-thumbnail {{ if $thumbnail_size }}summary-thumbnail-{{ $thumbnail_size }}{{ end }}">
+      <a href="{{ $url }}"><img alt="{{ $title }}" src="{{ . | relURL }}"/></a>
+    </div>
+  {{ end }}
+
+  <div class="summary-content">
+    <div class="summary-title">
+      <h2>
+        <a href="{{ $url }}">{{ $title }}</a>
+      </h2>
+    </div>
+    {{ with $params.client}}  
+      <span class="summary-client">
+        {{ . }}
+      </span>
+    {{ end }}
+  </div>
+</div>

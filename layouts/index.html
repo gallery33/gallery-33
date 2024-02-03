@@ -1,0 +1,73 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {{ partial "framework/sections/heading/heading.html" (dict "title" .Title "description" .Description ) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{ $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ $limit := .Params.projects.limit }}
+    {{ $sort_by := .Params.projects.sort | default "date" }}
+    {{ $sorted_projects := $projects.ByDate }}
+    {{ if eq $sort_by "weight" }}{{ $sorted_projects := $projects.ByWeight }}{{ end }}
+    {{ $columns:= .Params.projects.columns | default 3 }}
+    {{ if gt $sorted_projects.Len 0 }}
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row">
+                {{ partial "framework/grid/grid-header.html" (dict "heading" .Params.projects.heading "sub_heading" .Params.projects.sub_heading "align" .Params.projects.align) }}
+                {{ range $index, $card := first $limit $sorted_projects }}
+                    <div class="col-12 col-md-6 col-lg-{{ div 12 $columns }} mb-gutter mt-gutter {{ if eq $index 0 }}mt-0{{ else if eq $index (sub (len (first $limit $sorted_projects)) 1) }} mb-0{{ end }} mt-md-0">
+                        {{ partial "theme/summary-project.html" (dict "page" $card ) }}
+                    </div>
+                {{ end }}
+                {{ partial "framework/grid/grid-footer.html" (dict "view_more_button_text" .Params.projects.view_more_button_text "view_more_button_link" .Params.projects.view_more_button_link)}}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ $limit := .Params.posts.limit }}
+    {{ $sort_by := .Params.posts.sort | default "date" }}
+    {{ $sorted_posts := $posts.ByDate.Reverse }}
+    {{ if eq $sort_by "weight" }}{{ $sorted_posts := $posts.ByWeight }}{{ end }}
+    {{ $postColumns:= .Params.posts.columns | default 3 }}
+    {{ if gt $sorted_projects.Len 0 }}
+    <div class="section section-base-bg-2">
+        <div class="container">
+          <div class="row">
+                {{ partial "framework/grid/grid-header.html" (dict "heading" .Params.posts.heading "sub_heading" .Params.posts.sub_heading) }}
+                {{ range $index, $card := first $limit $sorted_posts }}
+                    <div
+                        class="col-12 col-md-6 col-lg-{{ div 12 $postColumns }} mb-gutter mt-gutter {{ if eq $index 0 }}mt-0{{ else if eq $index (sub (len (first $limit $sorted_posts)) 1) }} mb-0{{ end }} mt-md-0">
+                        {{ partial "theme/summary-post.html" (dict "page" $card ) }}
+                    </div>
+                {{ end }}
+                {{ partial "framework/grid/grid-footer.html" (dict "view_more_button_text" .Params.posts.view_more_button_text "view_more_button_link" .Params.posts.view_more_button_link)}}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if ne .Site.Params.newsletter.mailchimp.form_action_url "" }}
+        <div class="section section-base-bg-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    {{ partial "framework/sections/subscribe/subscribe.html" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+
+{{ end }}
