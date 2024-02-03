@@ -49,19 +49,19 @@ params:
     logo: "'DM Sans'"
 
   logo:
-    logo_text: "Hugo Curate"
-    logo_image_desktop: images/logo/logo.png
+    logo_text: "Gallery"
+    logo_image_desktop: images/logo/logo.svg
     logo_image_mobile: images/logo/logo-mobile.png
     logo_image_desktop_invert: images/logo/logo-invert.png
     logo_image_mobile_invert: images/logo/logo-invert-mobile.png
-    logo_image_desktop_height: "28px"
-    logo_image_desktop_width: "28px"
+    logo_image_desktop_height: "42px"
+    logo_image_desktop_width: "42px"
     logo_image_mobile_height: "28px"
     logo_image_mobile_width: "28px"
     show_logo_image_on_mobile: true
     show_logo_image_on_desktop: true
     show_logo_text_on_mobile: false
-    show_logo_text_on_desktop: false
+    show_logo_text_on_desktop: true
     logo_text_font_size: "28px"
     logo_text_font_weight: "500"
 
@@ -114,6 +114,16 @@ params:
     enable_language_switcher: true
     show_language_switcher_in_header: true
 
+languages:
+  en:
+    weight: 1
+    languageName: English
+    contentDir: content/en
+  bg:
+    weight: 2
+    languageName: Български
+    contentDir: content/bg
+
   menu:
     show_dropdown_items_in_mobile_menu: false
     show_social_media_in_mobile_menu: true
@@ -123,7 +133,7 @@ params:
     footer_title: "Hugo Curate"
     footer_description: "Curate is a creative portfolio for Hugo by Zerostatic Themes."
     enable_social_media_links: true
-    enable_languages: false
+    enable_languages: true
     enable_copyright: false
     enable_menu_footer_primary: true
     enable_menu_footer_secondary: true
