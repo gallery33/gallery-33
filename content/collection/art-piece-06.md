@@ -4,7 +4,7 @@ layout: art-piece
 weight: 5
 
 title: "Автокъща"
-authors: ["Юри Буков"]
+authors: "Юри Буков"
 year: "2006"
 tags: ["маслени бои, платно"]
 size: "80 х 100 см"

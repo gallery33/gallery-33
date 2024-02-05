@@ -2,6 +2,8 @@
 {{ define "body_classes" }}page-projects page-project-left{{ end }}
 {{ define "header_classes" }}{{ end }}
 
+
+
 {{ define "main" }}
 {{$limit:= .Params.gallery_limit | default 6 }}
 
@@ -56,11 +58,13 @@
         </div>
       {{ end }}
       
-      <a href="/contact"> <!-- Replace "/contact" with the actual URL of your contact page -->
+      <a href="/contact?title={{ .Title | urlize }}&authors={{ .Params.authors | urlize }}">
         <div class="form-group">
-          <input type="submit" name="submit" class="button button-primary" value="{{ "Покупка" }}" />
+            <input type="submit" name="submit" class="button button-primary" value="{{ "Покупка" }}" />
         </div>
-      </a>
+    </a>
+    
+    
       
 
 
@@ -69,4 +73,8 @@
     </div>
   </div>
 </div>
+
+
+
+
 {{ end }}
