@@ -1,25 +1,48 @@
 <form name="contact" method="POST" action="success" data-netlify="true" name="{{ .Site.Params.contact_form.netlify_form_name }}">
+    <!-- The following three fields are required for Netlify Forms -->
+    <input type="hidden" name="form-name" value="contact" />
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+  
+    <!-- Add a hidden field to store the source page title dynamically -->
+    <input type="hidden" name="source_page" id="sourcePage" />
+  
     <div class="row">
-        <div class="col">
-            <div class="form-group mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input id="name" type="text" name="name" class="form-control" placeholder="" value="" required />
-            </div>
-            <div class="form-group mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input id="email" type="email" name="email" class="form-control" placeholder="" value="" required />
-            </div>
-            <div class="form-group mb-3">
-                <label for="phone" class="form-label">Phone</label>
-                <input id="phone" type="text" name="phone" class="form-control" placeholder="" value="" />
-            </div>
-            <div class="form-group mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea id="message" name="message" class="form-control" placeholder="" style="width: 100%; height: 150px;"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" name="submit" class="button button-primary" value="{{ .Params.contact.button_text | default "Submit" }}" />
-            </div>
+      <div class="col">
+        <div class="form-group mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" type="text" name="name" class="form-control" placeholder="" value="" required />
         </div>
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" type="email" name="email" class="form-control" placeholder="" value="" required />
+        </div>
+        <div class="form-group mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input id="phone" type="text" name="phone" class="form-control" placeholder="" value="" />
+        </div>
+        <div class="form-group mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-control" placeholder="" style="width: 100%; height: 150px;"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" name="submit" class="button button-primary" value="{{ .Params.contact.button_text | default "Submit" }}" />
+        </div>
+      </div>
     </div>
-</form>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var sourcePageField = document.getElementById('sourcePage');
+        var referringPage = document.referrer;
+  
+        // Set the value of the hidden field to the referring page title
+        if (referringPage) {
+          var referringPageTitle = referringPage.split('/').pop(); // Extract the title from the URL
+          sourcePageField.value = referringPageTitle;
+        }
+      });
+    </script>
+  </form>
+  

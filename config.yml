@@ -1,5 +1,5 @@
 baseURL: /
-title: Hugo Curate
+title: Галерия 33
 
 paginate: 6
 enableGitInfo: false
@@ -7,8 +7,8 @@ pygmentsCodeFences: true
 pygmentsCodefencesGuessSyntax: true
 pygmentsUseClasses: true
 metaDataFormat: yaml
-languageCode: "en-us"
-defaultContentLanguage: en
+languageCode: "bg"
+defaultContentLanguage: bg
 defaultContentLanguageInSubdir: false
 
 params:
@@ -77,10 +77,10 @@ params:
     og_twitter_creator: "@zerostaticio"
 
   dark_mode:
-    enable_dark_mode: true
-    show_dark_mode_toggle_in_header: true
+    enable_dark_mode: false
+    show_dark_mode_toggle_in_header: false
     show_dark_mode_toggle_in_bottom: false
-    show_dark_mode_toggle_in_mobile_menu: true
+    show_dark_mode_toggle_in_mobile_menu: false
 
   cookie_banner:
     enabled: false
@@ -88,16 +88,6 @@ params:
 
   analytics:
     google_analytics_id: "" # G-XXXXXXXXXX
-    gtm_id: "" # GTM-XXXXXXXX
-    plausible_data_domain: "" # example: mywebsite.com
-    umami_data_website_id: "" # example: "ddd14336-5fb0-4cdd-8f32-e1bfa906cc2b"
-    umami_src: "" # "https://analytics.eu.umami.is/script.js"
-
-  comments:
-    commento:
-      enabled: true # you must have a commento account and be on the correct domain. does not work locally.
-    disqus:
-      shortname: "" # Your disqus shortcode for example "zerostatic". leave this blank ie "" to disable.
 
   newsletter:
     mailchimp:
@@ -106,8 +96,6 @@ params:
 
   contact_form:
     use_netlify_form: true
-    use_formspree_form: false
-
     netlify_form_name: "contact"
 
   multilingual:
@@ -120,101 +108,59 @@ params:
 
   footer:
     enable_footer: true # show/hide the entire footer
-    footer_title: "Hugo Curate"
-    footer_description: "Curate is a creative portfolio for Hugo by Zerostatic Themes."
+    footer_title: "Галерия 33"
+    footer_description: "Галерия 33, разположена във Варна, представя изключителна колекция от изящни изкуства. С фокус върху изисканите творби, галерията предлага завладяващо пътуване из света на изящните изкуства. Нейният уебсайт предоставя възможността да се насладите на богатството от изкуство."
     enable_social_media_links: true
     enable_languages: false
     enable_copyright: false
     enable_menu_footer_primary: true
     enable_menu_footer_secondary: true
     enable_menu_footer_tertiary: false
-    footer_primary_menu_title: "Projects"
-    footer_secondary_menu_title: "Company"
+    footer_primary_menu_title: "Дейност"
+    footer_secondary_menu_title: "Документи"
     footer_tertiary_menu_title: "Support"
 
   bottom:
     enabled: false # show/hide the entire bottom (below the footer)
     enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
-    copyright_text: "© 2023 Zerostatic Themes"
+    copyright_text: "© 2023 Галерия 33"
     show_rss_icon: true
 
 menu:
   main:
-    - name: Home
-      pageRef: /
+    - name: Изложби
+      pageRef: exhibitions
       weight: 1
-    - name: Projects
-      pageRef: projects
+    - name: Колекция
+      pageRef: collection
       weight: 2
-      # Projects dropdown menu
-    - name: "Project Layout 1"
-      pageRef: projects/project-1
-      parent: Projects
-      weight: 1
-      params:
-        icon: "images/icons/wireframe-7.svg"
-        icon_darkmode: "images/icons/wireframe-7-white.svg"
-        description: "Default Project layout"
-    - name: "Project Layout 2"
-      pageRef: projects/project-2
-      parent: Projects
-      weight: 2
-      params:
-        icon: "images/icons/wireframe-5.svg"
-        icon_darkmode: "images/icons/wireframe-5-white.svg"
-        description: "Right side layout"
-    - name: "Project Layout 3"
-      pageRef: projects/project-3
-      parent: Projects
-      weight: 3
-      params:
-        icon: "images/icons/wireframe-6.svg"
-        icon_darkmode: "images/icons/wireframe-6-white.svg"
-        description: "Left side layout"
-    - name: "Project Layout 4"
-      pageRef: projects/project-4
-      parent: Projects
-      weight: 4
-      params:
-        icon: "images/icons/wireframe-8.svg"
-        icon_darkmode: "images/icons/wireframe-8-white.svg"
-        description: "Top layout"
-    - name: Blog
-      pageRef: posts
-      weight: 3
-    - name: About
+    - name: Дейност
       pageRef: about
       weight: 4
-    - name: Contact
-      pageRef: contact
-      weight: 5
   footer_primary:
-    - name: "Project 1"
-      pageRef: projects/project-1
+    - name: "Изложби"
+      pageRef: exhibitions
       weight: 1
-    - name: "Project 2"
-      pageRef: projects/project-2
+    - name: "Колекция"
+      pageRef: collection
       weight: 2
-    - name: "Project 3"
-      pageRef: projects/project-3
+    - name: "Патрон 33"
+      pageRef: patron33
       weight: 3
-    - name: "Project 4"
-      pageRef: projects/project-4
-      weight: 4
   footer_secondary:
-    - name: Blog
-      pageRef: posts
+    - name: Контакт
+      pageRef: contact
       weight: 1
-    - name: About
+    - name: За нас
       pageRef: about
       weight: 2
-    - name: Contact
-      pageRef: contact
+    - name: Пространство
+      pageRef: space
       weight: 3
-    - name: Privacy Policy
-      pageRef: privacy
+    - name: Документи
+      pageRef: documents
       weight: 4
-    - name: Terms and Conditions
+    - name: Интелектуални права и поверителност
       pageRef: terms
       weight: 5
   bottom:
@@ -231,7 +177,7 @@ permalinks:
 
 taxonomies:
   tag: tags
-  category: categories
+  category1: categories
   author: authors
 
 markup:
