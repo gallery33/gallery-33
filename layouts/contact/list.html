@@ -4,9 +4,6 @@
 
 {{ define "main" }}
 
-    {{ if .Params.hero }}
-        {{ partial "framework/sections/hero/hero.html" (dict "context" $ "hero" .Params.hero) }}
-    {{ else }}
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -16,16 +13,57 @@
                 </div>
             </div>
         </div>
-    {{ end }}
 
-    {{ if or .Content .Params.contact }}
-    <div class="section section-base-bg pt-3 pb-0">
+    {{ if .Params.locations }}
+    <div class="section section-base-bg section-border-top">
         <div class="container">
             <div class="row">
-                <div class="col-8">
-                    <div class="content">{{ .Content }}</div>
-                    {{ partial "framework/components/contact" (dict "contact" .Params.contact) }}
+                <div class="col-12 col-lg-8">
+                    <h2>Локация:</h2>
                 </div>
+                {{ range .Params.locations }}
+                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                    <div class="location">
+                        <h3>{{ .title | safeHTML }}</h3>
+                        {{ if .address }}
+                        <div>
+                            <strong>Адрес:</strong>
+                            {{ .address | safeHTML }}
+                        </div>
+                        {{ end }}
+                        <ul>
+                            {{ if .phone }}
+                            <li>
+                                <strong>Телефон: </strong>
+                                <a href="tel:{{ .phone }}">{{ .phone }}</a>
+                            </li>
+                            {{ end }}
+                            {{ if .email }}
+                            <li>
+                                <strong>Имейл: </strong>
+                                <a href="mailto:{{ .email }}">{{ .email }}</a>
+                            </li>
+                            {{ end }}
+                            {{ if .google_map_text_link }}
+                            <li>
+                                <a href="{{ .google_map_text_link }}">Линк към Гугъл Мапс</a>
+                            </li>
+                            {{ end }}
+                        </ul>
+
+                        {{ if .google_map_embed_link }}
+                        <iframe src="{{ .google_map_embed_link }}" class="location-map-embed" width="600" height="450"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            
+                        {{ end }}
+                  
+                    </div>
+       
+                </div>
+                
+                {{ end }}
+
             </div>
         </div>
     </div>
@@ -42,54 +80,18 @@
         </div>
     </div>
 
-    {{ if .Params.locations }}
-    <div class="section section-base-bg section-border-top">
+    {{ if or .Content .Params.contact }}
+    <div class="section section-base-bg pt-3 pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8">
-                    <h2>Locations</h2>
-                </div>
-                {{ range .Params.locations }}
-                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <div class="location">
-                        <h3>{{ .title | safeHTML }}</h3>
-                        {{ if .address }}
-                        <div>
-                            <strong>Address:</strong>
-                            {{ .address | safeHTML }}
-                        </div>
-                        {{ end }}
-                        <ul>
-                            {{ if .phone }}
-                            <li>
-                                <strong>Phone: </strong>
-                                <a href="tel:{{ .phone }}">{{ .phone }}</a>
-                            </li>
-                            {{ end }}
-                            {{ if .email }}
-                            <li>
-                                <strong>Email: </strong>
-                                <a href="mailto:{{ .email }}">{{ .email }}</a>
-                            </li>
-                            {{ end }}
-                            {{ if .google_map_text_link }}
-                            <li>
-                                <a href="{{ .google_map_text_link }}">Google Map Link</a>
-                            </li>
-                            {{ end }}
-                        </ul>
 
-                        {{ if .google_map_embed_link }}
-                        <iframe src="{{ .google_map_embed_link }}" class="location-map-embed" width="600" height="450"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        {{ end }}
-                    </div>
+                <div class="col-8">
+                    <h3>Или се свържете директно с нас чрез:</h3>
+                    <div class="content">{{ .Content }}</div>
+                    {{ partial "framework/components/contact" (dict "contact" .Params.contact) }}
                 </div>
-                {{ end }}
             </div>
         </div>
     </div>
     {{ end }}
-
 {{ end }}

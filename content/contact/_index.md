@@ -4,9 +4,11 @@ date: 2018-02-22T17:01:34+07:00
 
 contact:
   form_heading: ""
-  phone: "+61 473XXXXXX"
+  phone: "0885 05 09 19"
   email: "example@example.com"
-  address: "64 Adelaide St, Brisbane City QLD 4000"
+  address: "Варна, улица номер 123123"
   google_map_text_link: https://maps.app.goo.gl/RbWWV8UAZdwAoC9u7
-  button_text: "Подай"
+  google_map_embed_link: "https://maps.app.goo.gl/RbWWV8UAZdwAoC9u7"
+
+  button_text: "изпрати"
 ---

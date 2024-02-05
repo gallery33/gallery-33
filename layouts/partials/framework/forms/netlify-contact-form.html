@@ -3,7 +3,7 @@
         <div class="col">
 
             <div class="form-group mb-3">
-                <label for="artwork" class="form-label">Име на произведение</label>
+                <label for="artwork" class="form-label">Име на произведението</label>
                 <input id="artwork" type="text" name="artwork" class="form-control" placeholder="" value="{{ .Title }}" required />
             </div>
             <div class="form-group mb-3">
@@ -15,7 +15,7 @@
                 <input id="email" type="email" name="email" class="form-control" placeholder="" value="" required />
             </div>
             <div class="form-group mb-3">
-                <label for="phone" class="form-label">Вашия телефон</label>
+                <label for="phone" class="form-label">Телефон за контакт</label>
                 <input id="phone" type="text" name="phone" class="form-control" placeholder="" value="" />
             </div>
         </div>
@@ -27,15 +27,17 @@
 </form>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        // Get the title, authors, and post date from the URL query parameters and decode them
+        // Get the title, category, and date from the URL query parameters and decode them
         const urlParams = new URLSearchParams(window.location.search);
         const title = urlParams.get('title');
         const decodedTitle = decodeURIComponent(title || '');
-        const authors = urlParams.get('authors');
-        const decodedAuthors = decodeURIComponent(authors || '');
+        const category = urlParams.get('category');
+        const decodedCategory = decodeURIComponent(category || '').replace(/_/g, ' ');
+        const date = urlParams.get('date');
+        const decodedDate = decodeURIComponent(date || '');
 
         // Concatenate the values to create a custom pre-filled text
-        const preFilledText = `${decodedTitle} - ${decodedAuthors}`;
+        const preFilledText = `${decodedTitle} - ${decodedCategory} - ${decodedDate}`;
 
         // Set the value of the "Име на произведение" field
         const artworkField = document.getElementById('artwork');
@@ -44,6 +46,8 @@
         }
     });
 </script>
+
+
 
 
 

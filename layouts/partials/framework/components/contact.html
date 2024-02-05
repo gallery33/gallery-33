@@ -1,20 +1,21 @@
 <div class="contact">
   {{ if .contact.email }}
     <div class="contact-email">
-      <strong>Email:</strong>
+      <strong>Имейл:</strong>
       <a href="mailto:{{ .contact.email }}">{{ .contact.email }}</a>
     </div>
   {{ end }}
   {{ if .contact.phone }}
     <div class="contact-phone">
-      <strong>Phone:</strong>
+      <strong>Телефон:</strong>
       {{ .contact.phone }}</div>
   {{ end }}
   {{ if .contact.address }}
     <div class="contact-address">
-      <strong>Address:</strong>
+      <strong>Адрес:</strong>
       {{ .contact.address }} 
-      {{ if .contact.google_map_text_link }}<a href="{{ .contact.google_map_text_link }}" target="_blank" rel="noreferrer">(View Map)</a> {{ end }}
+      
+      {{ if .contact.google_map_text_link }}<a href="{{ .contact.google_map_text_link }}" target="_blank" rel="noreferrer">(Виж на карта)</a> {{ end }}
     </div>
   {{ end }}
 </div>
