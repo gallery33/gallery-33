@@ -1,6 +1,5 @@
-{{ if .Params.authors }}
+{{ if .Params.categories }}
 <div class="post-categories">
-
     {{ range .Params.categories }}
         <a class="post-category" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
     {{ end }}

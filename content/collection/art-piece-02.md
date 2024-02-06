@@ -6,7 +6,7 @@ weight: 1
 title: "Вечерта II"
 authors: ["Стилиян Атанасов"]
 year: "2003"
-tags: ["м.б., платно"]
+tags: ["маслени-бои", "платно"]
 size: "70 х 74,5 см"
 
 categories: ["Стилиян Атанасов"]
@@ -14,9 +14,9 @@ role: "Artist"
 
 description: "Кратко описание на парчето, рисунка от автора Стилиян Атанасов"
 
-thumbnail: "images/gen/projects/project-1-4.webp"
-image: "images/gen/projects/project-1-1.webp"
+thumbnail: "images/collection/image-084.jpg"
+image: "images/collection/image-084.jpg"
 gallery:
-  - image: "images/gen/projects/project-1-4.webp"
+  - image: "images/collection/image-084.jpg"
 ---
 без подпис

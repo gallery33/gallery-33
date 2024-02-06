@@ -5,6 +5,7 @@
 {{ $params:= .page.Params }}
 {{ $url:= .page.RelPermalink }}
 {{ $title:= .page.Title }}
+{{ $categories:= .page.Params.categories }}
 
 <div class="summary summary-project summary-{{ $style }} {{ if $params.thumbnail }}summary-has-thumbnail{{ end }} {{ if and $icon $fa_icon }}summary-has-icon{{ end }}">
 
@@ -17,7 +18,11 @@
   <div class="summary-content">
     <div class="summary-title">
       <h2>
-        <a href="{{ $url }}">{{ $title }}</a>
+        <a href="{{ $url }}">{{ $title }}</a> - 
+        {{ range $index, $category := $categories }}
+          {{ if $index }}, {{ end }}
+          {{ $category }}
+        {{ end }}
       </h2>
     </div>
     {{ with $params.size}}  

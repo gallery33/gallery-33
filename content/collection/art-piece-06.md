@@ -6,7 +6,7 @@ weight: 5
 title: "Автокъща"
 authors: "Юри Буков"
 year: "2006"
-tags: ["маслени бои, платно"]
+tags: ["маслени бои", "платно"]
 size: "80 х 100 см"
 
 categories: ["Юри Буков"]
@@ -14,9 +14,9 @@ categories: ["Юри Буков"]
 
 description: "Кратко описание на парчето, рисунка от автора Юри Буков"
 
-thumbnail: "images/gen/projects/project-4-4.webp"
-image: "images/gen/projects/project-5-1.webp"
+thumbnail: "images/collection/image-088.jpg"
+image: "images/collection/image-088.jpg"
 gallery:
-  - image: "images/gen/projects/project-4-4.webp"
+  - image: "images/collection/image-088.jpg"
 ---
-без подпис
+Подписана на гърба Автокъща

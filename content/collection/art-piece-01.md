@@ -10,13 +10,13 @@ tags: ["маслени бои", "платно"]
 size: "90 х 90 см"
 
 categories: ["Юри Буков"]
-role: "Artist"
+
 
 description: "Кратко описание на парчето, рисунка от автора Юри Буков"
 
-thumbnail: "images/gen/projects/project-2-4.webp"
-image: "images/gen/projects/project-2-1.webp"
+thumbnail: "images/collection/image-085.jpg"
+image: "images/collection/image-085.jpg"
 gallery:
-  - image: "images/gen/projects/project-2-4.webp"
+  - image: "images/collection/image-085.jpg"
 ---
 без подпис

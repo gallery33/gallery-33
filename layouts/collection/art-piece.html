@@ -2,8 +2,6 @@
 {{ define "body_classes" }}page-projects page-project-left{{ end }}
 {{ define "header_classes" }}{{ end }}
 
-
-
 {{ define "main" }}
 {{$limit:= .Params.gallery_limit | default 6 }}
 
@@ -28,13 +26,12 @@
           <h1>{{ . }}</h1>
         </div>
         {{ end }}
-        {{ if .Params.authors }}
+        {{ if .Params.categories }}
           <div class="mb-2">
             {{ partial "framework/blog/post-author.html" . }}
           </div>
         {{ end }}
         
-
         {{ with .Params.year }}
         <div class="project-client">
           <strong>Година: </strong><span>{{ . }}</span>
@@ -57,20 +54,19 @@
           <strong>Размер: </strong><span>{{ . }}</span>
         </div>
       {{ end }}
-      
+
+      <div class="content">{{ .Content }}</div>
+
       <a href="/contact?title={{ .Title | urlize }}&category={{ with .Params.categories }}{{ index . 0 | urlize }}{{ end }}&date={{ .Date.Format "20060102" }}">
         <div class="form-group">
             <input type="submit" name="submit" class="button button-primary" value="{{ "Покупка" }}" />
         </div>
     </a>
     
-    
-        <div class="content">{{ .Content }}</div>
+  
       </div>
     </div>
   </div>
 </div>
-
-
 
 {{ end }}
