@@ -1,7 +1,7 @@
 ---
 date: 2022-01-02
 layout: art-piece
-weight: 2
+
 
 title: "Наздраве"
 authors: ["Юри Буков"]

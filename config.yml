@@ -112,7 +112,7 @@ params:
     footer_description: "Галерия 33, разположена във Варна, представя изключителна колекция от изящни изкуства. С фокус върху изисканите творби, галерията предлага завладяващо пътуване из света на изящните изкуства. Нейният уебсайт предоставя възможността да се насладите на богатството от изкуство."
     enable_social_media_links: true
     enable_languages: false
-    enable_copyright: false
+    enable_copyright: true
     enable_menu_footer_primary: true
     enable_menu_footer_secondary: true
     enable_menu_footer_tertiary: false
@@ -123,7 +123,7 @@ params:
   bottom:
     enabled: false # show/hide the entire bottom (below the footer)
     enable_bottom_menu: true # if enabled, the bottom menu can be edited in `_data/menu.yml`
-    copyright_text: "© 2023 Галерия 33"
+    copyright_text: "© 2024 - Галерия 33"
     show_rss_icon: true
 
 menu:

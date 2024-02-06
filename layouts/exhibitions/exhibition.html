@@ -32,6 +32,7 @@
         </div>
         {{ end }}
 
+
         <div class="content">{{ .Content }}</div>
         {{ with .Date }}
         {{ $dateFormat := default "Jan 2, 2006" (index site.Params "date_format") }}
@@ -39,13 +40,13 @@
           <strong>Date </strong><span>{{ .Format $dateFormat }}</span>
         </div>
         {{ end }}
-
+    
         {{ with .Params.client }}
         <div class="project-client">
           <strong>Client </strong><span>{{ . }}</span>
         </div>
         {{ end }}
-
+    
         {{ with .Params.role }}
         <div class="project-role">
           <strong>Role </strong><span>{{ . }}</span>
@@ -53,6 +54,7 @@
         {{ end }}
       </div>
     </div>
+
   </div>
 </div>
 {{ end }}
