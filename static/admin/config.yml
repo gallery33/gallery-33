@@ -1,42 +1,46 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-  media_folder: "static/images/" # Media files will be stored in the repo under static/images/uploads
-  media_library: "/images/" # The src attribute for uploaded media will begin with /images/uploads
+  branch: main 
+  
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
+collections:
+  - name: "exhibition"
+    label: "Exhibition"
+    folder: "_posts/exhibition"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Artist", name: "artist", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Gallery Limit", name: "gallery_limit", widget: "number"}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Gallery", name: "gallery", widget: "list", fields: [
+          {label: "Image", name: "image", widget: "image"}
+        ]}
 
-  collections:
-  - name: "collection" # Used in routes, e.g., /admin/collections/blog
-    label: "Колекция" # Used in the UI
-    folder: "content/collection" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "Тип", widget: "string", default: "exhibition"}
-      - {label: "Title", name: "Име", widget: "string"}
-      - {label: "Publish Date", name: "дата", widget: "datetime"}
-      - {label: "authors", name: "authors", widget: "Text"}
-      - {label: "year", name: "year", widget: "number"}
-      - {label: "tags", name: "medium", widget: "Text"}
-      - {label: "size", name: "size", widget: "Text"}
-      - {label: "thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "image", name: "image", widget: "image"}
-      - {label: "gallery", name: "gallery", widget: "image"}
-      - {label: "description", name: "description", widget: "number"}
-
-  - name: "exhibitions" # Used in routes, e.g., /admin/collections/blog
-    label: "izlojbi" # Used in the UI
-    folder: "content/exhibitions" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "Тип", widget: "string", default: "exhibition"}
-      - {label: "Title", name: "Име", widget: "string"}
-      - {label: "Publish Date", name: "дата", widget: "datetime"}
-      - {label: "artist", name: "authors", widget: "Text"}
-
-
-      - {label: "thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "image", name: "image", widget: "image"}
-      - {label: "gallery", name: "gallery", widget: "image"}
-      - {label: "description", name: "description", widget: "number"}
+  - name: "art-piece"
+    label: "Art Piece"
+    folder: "_posts/art-piece"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Authors", name: "authors", widget: "list", field: {label: "Author", name: "author", widget: "string"}}
+      - {label: "Year", name: "year", widget: "string"}
+      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Categories", name: "categories", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Gallery", name: "gallery", widget: "list", fields: [
+          {label: "Image", name: "image", widget: "image"}
+        ]}
