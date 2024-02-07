@@ -32,7 +32,9 @@
             .logo-text {
                 font-size: var(--logo-text-font-size);
                 font-weight: var(--logo-text-font-weight);
-                font-family: var(--font-family-logo);
+                font-family: "Inter";
+                font-weight: 700;
+                margin-right: 0.5rem;
                 a {
                     color: inherit;
                 }

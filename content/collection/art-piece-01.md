@@ -6,7 +6,7 @@ layout: art-piece
 title: "Наздраве"
 authors: ["Юри Буков"]
 year: "1990"
-tags: ["маслени бои", "платно"]
+tags: ["маслени бои", "платно", "test"]
 size: "90 х 90 см"
 
 categories: ["Юри Буков"]

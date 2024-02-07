@@ -1,9 +1,8 @@
 {{ if .Params.tags }}
 <div class="post-tags">
-    opa
+ 
     {{ range .Params.tags }}
-        <a class="post-tags" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        <a class="post-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
     {{ end }}
 </div>
 {{ end }}
-

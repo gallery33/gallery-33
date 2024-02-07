@@ -31,23 +31,25 @@
             {{ partial "framework/blog/post-author.html" . }}
           </div>
         {{ end }}
-        
+
         {{ with .Params.year }}
         <div class="project-client">
           <strong>Година: </strong><span>{{ . }}</span>
         </div>
       {{ end }}
       
-      {{ with .Params.tags }}
-      <div class="project-role">
-        <strong>Техника: </strong>
-        {{ range $index, $tag := . }}
-          <a href="{{ "/tags/" | relLangURL }}{{ $tag | safeURL }}">{{ $tag }}</a>
-          {{ if ne $index (sub (len .) 1) }},{{ end }}
-        {{ end }}
-      </div>
+      {{ if .Params.tags }}
       
+      <div class="post-client">
+        <strong>Техника: </strong>
+          {{ range .Params.tags }}
+              {{ $tagURL := . | urlize }}
+              <a class="post-client" href="{{ "/tags/" | relLangURL }}{{ $tagURL }}">{{ . }}</a>
+              
+          {{ end }}
+      </div>
       {{ end }}
+      
       
       {{ with .Params.size }}
         <div class="project-client">

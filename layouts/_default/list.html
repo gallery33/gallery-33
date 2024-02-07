@@ -3,6 +3,40 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        {{ partial "framework/sections/heading/heading.html" (dict "title" .Title "description" .Description "image"
+        .Params.image "badge" "Техника") }}
+        {{/*  заглавие на категорията  */}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ $projects := where .Site.RegularPages "Section" "collection" }}
+{{ if ne $projects.Len 0 }}
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row">
+                {{ $filteredProjects := where $projects "Params.tags" "intersect" (slice .Title) }}
+                {{ range $index, $card := $filteredProjects }}
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        {{ partial "theme/summary-project.html" (dict "page" $card) }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}
+{{ end }}
+
+
+
+
+{{/*  
+{{ define "main" }}
 
     {{ if .Params.hero }}
         {{ partial "framework/components/hero.html" (dict "title" .Title "description" .Params.description "background" .Params.hero.background "blend_mode" .Params.hero.blend_mode "theme" .Params.hero.theme)}}
@@ -22,7 +56,6 @@
             </div>
         </div>
     {{ end }}
-
     {{ $pages := .Pages }}
     {{ $pagesCount := len $pages }}
     {{ $summaryType := .Params.summary_type }}
@@ -58,4 +91,4 @@
         </div>
     {{ end }}
     
-{{ end }}
+{{ end }}  */}}

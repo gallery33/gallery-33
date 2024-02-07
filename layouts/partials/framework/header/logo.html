@@ -1,5 +1,10 @@
 <div class="logos">
     <div class="logo logo-desktop">
+        {{ if .Site.Params.logo.show_logo_text_on_desktop }}
+        <div class="logo-text"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.logo.logo_text }}</a></div>
+        {{ end }}
+
+
         {{ if .Site.Params.logo.show_logo_image_on_desktop }}
         <div class="logo-image">
             <a href="{{ .Site.Home.RelPermalink }}">
@@ -10,9 +15,6 @@
         </div>
         {{ end }}
 
-        {{ if .Site.Params.logo.show_logo_text_on_desktop }}
-        <div class="logo-text"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.logo.logo_text }}</a></div>
-        {{ end }}
 
     </div>
 
