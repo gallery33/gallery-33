@@ -12,7 +12,7 @@
         <div class="gallery gallery-single-column">
           {{ range first $limit .Params.gallery }}
           <div class="gallery-item">
-            <div class="gallery-image"><img src="{{ .image | relURL }}" /></div>
+            <div class="gallery-image"><img src="{{ .image | relURL }}" alt="{{ .Title }}" /></div>
             {{ with .caption }}
             <div class="gallery-caption">{{ . | safeHTML }}</div>
             {{ end }}
@@ -36,36 +36,27 @@
         <div class="project-client">
           <strong>Година: </strong><span>{{ . }}</span>
         </div>
-      {{ end }}
+        {{ end }}
+        
+        {{ if .Params.tags }}
+        <div class="project-client">
+          <strong>Техника: </strong> {{ range $index, $tag := .Params.tags }}{{ if ne $index 0 }}, {{ end }}<a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}
+        </div>
+        {{ end }}
       
-      {{ if .Params.tags }}
-      
-      <div class="post-client">
-        <strong>Техника: </strong>
-          {{ range .Params.tags }}
-              {{ $tagURL := . | urlize }}
-              <a class="post-client" href="{{ "/tags/" | relLangURL }}{{ $tagURL }}">{{ . }}</a>
-              
-          {{ end }}
-      </div>
-      {{ end }}
-      
-      
-      {{ with .Params.size }}
+        {{ with .Params.size }}
         <div class="project-client">
           <strong>Размер: </strong><span>{{ . }}</span>
         </div>
-      {{ end }}
+        {{ end }}
 
-      <div class="content">{{ .Content }}</div>
+        <div class="content">{{ .Content }}</div>
 
-      <a href="/contact?title={{ .Title | urlize }}&category={{ with .Params.categories }}{{ index . 0 | urlize }}{{ end }}&date={{ .Date.Format "20060102" }}">
-        <div class="form-group">
+        <a href="/contact?title={{ .Title | urlize }}&category={{ with .Params.categories }}{{ index . 0 | urlize }}{{ end }}&date={{ .Date.Format "20060102" }}">
+          <div class="form-group">
             <input type="submit" name="submit" class="button button-primary" value="{{ "Покупка" }}" />
-        </div>
-    </a>
-    
-  
+          </div>
+        </a>
       </div>
     </div>
   </div>

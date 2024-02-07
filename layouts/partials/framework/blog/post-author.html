@@ -1,7 +1,12 @@
 {{ if .Params.categories }}
 <div class="post-categories">
-    {{ range .Params.categories }}
-        <a class="post-category" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ $categories := slice }}
+    {{ range $index, $category := .Params.categories }}
+        {{ $categories = $categories | append $category }}
+    {{ end }}
+    {{ range $index, $category := $categories }}
+        {{ if ne $index 0 }}, {{ end }}
+        <a class="post-category" href="{{ "/categories/" | relLangURL }}{{ $category | urlize }}">{{ $category }}</a>
     {{ end }}
 </div>
 {{ end }}
