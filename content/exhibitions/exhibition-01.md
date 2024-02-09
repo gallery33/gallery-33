@@ -1,12 +1,14 @@
 ---
 layout: exhibition
-title: "Примерно Изложба"
-artist: "Пещо Гошо"
+title: "Примерно Изложба 1"
+artist: ["Пещо Гошо", "1"]
+when: "21.03 - 03.05.2023"
 
-description: "Иван Иванов"
+
 date: 2021-08-15
 weight: 7
 gallery_limit: 3
+ongoind: 1
 permalink: /projects/project-7
 thumbnail: "images/gen/projects/project-4-1.webp"
 image: "images/gen/projects/project-4-1.webp"

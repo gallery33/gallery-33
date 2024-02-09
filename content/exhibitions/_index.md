@@ -1,7 +1,5 @@
 ---
-title: Предастоящи
-sub-title: настоящи
-third-title: минали
+
 projects:
   heading: "" # "Projects"
   sub_heading: "" # "A collection of our recent work"

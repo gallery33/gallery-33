@@ -17,6 +17,7 @@ collections:
       - {label: "Artist", name: "artist", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "ongoing", name: "представя (попълва се с 1 само за случващи се излложби) widget: "string"}
       - {label: "Gallery Limit", name: "gallery_limit", widget: "number"}
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
@@ -32,15 +33,13 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Authors", name: "authors", widget: "list", field: {label: "Author", name: "author", widget: "string"}}
-      - {label: "Year", name: "year", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-      - {label: "Size", name: "size", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Gallery", name: "gallery", widget: "list", fields: [
+      - {label: "Title", name: "Наименование", widget: "string"}
+      - {label: "Year", name: "година", widget: "string"}
+      - {label: "Tags", name: "Техника(и)", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+      - {label: "Size", name: "Размер", widget: "string"}
+      - {label: "Categories", name: "Автор(и)", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
+      - {label: "Description", name: "описание (не е задължително)", widget: "text"}
+      - {label: "Thumbnail", name: "Картика за листа", widget: "image"}
+      - {label: "Gallery", name: "Заглавна Картинка", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}

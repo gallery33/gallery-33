@@ -4,6 +4,7 @@
 
 {{ define "main" }}
 {{$limit:= .Params.gallery_limit | default 6 }}
+{{$categories := .Params.categories}} <!-- Define $categories -->
 
 <div class="section">
   <div class="container">
@@ -26,35 +27,28 @@
           <h1>{{ . }}</h1>
         </div>
         {{ end }}
-        {{ with .Params.categories }}
-        <div class="project-categories">
-          {{ partial "framework/components/categories-badges.html" (dict "categories" . ) }}
+        
+        <div class="post-categories">
+          {{ if .Params.artist }} <!-- Check if $artist is defined -->
+            {{ range $index, $element := .Params.artist }}
+              <h3 style="display: inline;">{{ $element }}</h3>{{ if ne $index (sub (len $.Params.artist) 1) }}, {{ end }}
+            {{ end }}
+          {{ end }}
         </div>
-        {{ end }}
-
-
-        <div class="content">{{ .Content }}</div>
-        {{ with .Date }}
-        {{ $dateFormat := default "Jan 2, 2006" (index site.Params "date_format") }}
+        
+        {{ with .Params.when }}
         <div class="project-date">
-          <strong>Date </strong><span>{{ .Format $dateFormat }}</span>
+        <span>{{ . }}</span>
         </div>
         {{ end }}
-    
-        {{ with .Params.client }}
-        <div class="project-client">
-          <strong>Client </strong><span>{{ . }}</span>
-        </div>
-        {{ end }}
-    
-        {{ with .Params.role }}
-        <div class="project-role">
-          <strong>Role </strong><span>{{ . }}</span>
-        </div>
-        {{ end }}
+        
+        <div class="content">{{ .Content }}</div>
+        
+        
+        
+
       </div>
     </div>
-
   </div>
 </div>
 {{ end }}

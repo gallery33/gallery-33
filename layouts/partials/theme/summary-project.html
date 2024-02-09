@@ -6,6 +6,7 @@
 {{ $url:= .page.RelPermalink }}
 {{ $title:= .page.Title }}
 {{ $categories:= .page.Params.categories }}
+{{ $artist:= $params.artist }} <!-- Accessing the artist field -->
 
 <div class="summary summary-project summary-{{ $style }} {{ if $params.thumbnail }}summary-has-thumbnail{{ end }} {{ if and $icon $fa_icon }}summary-has-icon{{ end }}">
 
@@ -19,9 +20,11 @@
     <div class="summary-title">
       <h2>
         <a href="{{ $url }}">{{ $title }}</a> - 
-        {{ range $index, $category := $categories }}
-          {{ if $index }}, {{ end }}
-          {{ $category }}
+
+        {{ if $artist }}
+          {{ range $index, $element := $artist }}
+            {{ $element }}{{ if ne $index (sub (len $artist) 1) }}, {{ end }}
+          {{ end }}
         {{ end }}
       </h2>
     </div>

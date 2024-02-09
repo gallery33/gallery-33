@@ -511,10 +511,10 @@
     }
     &.summary-thumbnail-large {
       @include media-breakpoint-up(md) {
-        max-height: 260px;
+        max-height: 360px;
       }
       @include media-breakpoint-up(xl) {
-        max-height: 300px;
+        max-height: 500px;
       }
     }
   }

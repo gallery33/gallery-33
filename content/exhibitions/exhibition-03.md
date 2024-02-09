@@ -1,20 +1,21 @@
 ---
 layout: exhibition
-title: "Примерно Изложба"
-artist: "Пещо Гошо"
+title: "Примерно Изложба 3"
+artist: ["Пещо Гошо", "1"]
+when: "21.03 - 03.05.2023"
 
-description: "Иван Иванов"
+
 date: 2021-08-15
 weight: 7
 gallery_limit: 3
 permalink: /projects/project-7
-thumbnail: "images/gen/projects/project-4-1.webp"
-image: "images/gen/projects/project-4-1.webp"
+thumbnail: "images/gen/projects/project-4-2.webp"
+image: "images/gen/projects/project-4-2.webp"
 
 
 gallery:
-  - image: "images/gen/projects/project-4-1.webp"
-  - image: "images/gen/projects/project-4-1.webp"
+  - image: "images/gen/projects/project-4-2.webp"
+  - image: "images/gen/projects/project-4-2.webp"
 ---
 
 Markdown is a lightweight markup language with plain-text-formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
