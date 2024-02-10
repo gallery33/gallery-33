@@ -16,11 +16,11 @@ projects:
   columns: 2 # 1 | 2 | 3 | 4
 
 posts:
-  heading: "Recent Posts"
+  heading: "нашата колекция"
   sub_heading: ""
   limit: 3
   sort: date # date | weight
-  view_more_button_text: ""
-  view_more_button_link: "" # "/blog"
+  view_more_button_text: "вижте още"
+  view_more_button_link: "/collection" # "/blog"
   columns: 3 # 1 | 2 | 3 | 4
 ---

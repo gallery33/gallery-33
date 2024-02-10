@@ -585,3 +585,17 @@
     }
   }
 }
+
+// za par4etata kontrol razmer
+.summary-thumbnail-artpiece {
+  width: 100%;
+  max-width: 400px; /* Set the maximum width for the container */
+}
+
+.summary-thumbnail-artpiece img {
+  width: 100%;
+  height: auto; /* Allow the height to adjust according to the original aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible within the container */
+}
+
+

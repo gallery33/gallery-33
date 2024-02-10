@@ -10,7 +10,7 @@
 <div class="summary summary-project summary-{{ $style }} {{ if $params.thumbnail }}summary-has-thumbnail{{ end }} {{ if and $icon $fa_icon }}summary-has-icon{{ end }}">
 
   {{ with $params.thumbnail }}
-    <div class="summary-thumbnail {{ if $thumbnail_size }}summary-thumbnail-{{ $thumbnail_size }}{{ end }}">
+    <div class="summary-thumbnail-artpiece {{ if $thumbnail_size }}summary-thumbnail-{{ $thumbnail_size }}{{ end }}">
       <a href="{{ $url }}"><img alt="{{ $title }}" src="{{ . | relURL }}"/></a>
     </div>
   {{ end }}
