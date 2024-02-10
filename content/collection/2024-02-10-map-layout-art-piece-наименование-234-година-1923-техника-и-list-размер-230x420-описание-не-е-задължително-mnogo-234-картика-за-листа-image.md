@@ -5,5 +5,8 @@ layout: art-piece
 Техника(и): []
 Размер: 230x420
 описание (не е задължително): MNOGO 234
-Картика за листа: /images/uploads/2019-hd_0006c.jpg
+Картика за листа: /images/uploads/286344824_538313661102156_6634246873579666241_n.jpg
+Заглавна Картинка:
+  - image: /images/uploads/screenshot-2021-12-06-at-15-58-55-instagram.png
+  - image: /images/uploads/286344824_538313661102156_6634246873579666241_n.jpg
 ---
