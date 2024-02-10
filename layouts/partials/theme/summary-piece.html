@@ -5,7 +5,7 @@
 {{ $params := .page.Params }}
 {{ $url := .page.RelPermalink }}
 {{ $title := .page.Title }}
-{{ $artists := .page.Params.artist }}
+{{ $categories := .page.Params.categories }}
 
 <div class="summary summary-project summary-{{ $style }} {{ if $params.thumbnail }}summary-has-thumbnail{{ end }} {{ if and $icon $fa_icon }}summary-has-icon{{ end }}">
 
@@ -19,10 +19,15 @@
     <div class="summary-title">
       <h2>
         <a href="{{ $url }}">{{ $title }}</a> - 
-        {{ range $index, $artist := $artists }}
-          {{ $artist }}{{ if lt $index (sub (len $artists) 1) }},{{ end }}
+        {{ range $index, $category := $categories }}
+          {{ $category }}{{ if lt $index (sub (len $categories) 1) }},{{ end }}
         {{ end }}
       </h2>
     </div>
+    {{ with $params.size }}  
+      <span class="summary-client">
+        {{ . }}
+      </span>
+    {{ end }}
   </div>
 </div>

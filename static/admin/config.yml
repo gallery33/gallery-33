@@ -17,7 +17,8 @@ collections:
       - {label: "Artist", name: "artist", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "ongoing", name: "представя (попълва се с 1 само за случващи се излложби) widget: "string"}
+      - {label: "ongoing", name: "представя (попълва се с 1 само за случващи се излложби)", widget: "text"}
+
       - {label: "Gallery Limit", name: "gallery_limit", widget: "number"}
       - {label: "Permalink", name: "permalink", widget: "string"}
       - {label: "Thumbnail", name: "thumbnail", widget: "image"}
