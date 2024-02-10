@@ -49,7 +49,7 @@ params:
     logo: "'Inter'"
 
   logo:
-    logo_text: "Галерия"
+    logo_text: "ГАЛЕРИЯ"
     logo_image_desktop: images/logo/logo.png
     logo_image_mobile: images/logo/logo-mobile.png
     logo_image_desktop_invert: images/logo/logo-invert.png
@@ -108,7 +108,7 @@ params:
 
   footer:
     enable_footer: true # show/hide the entire footer
-    footer_title: "Галерия 33"
+    footer_title: "ГАЛЕРИЯ 33"
     footer_description: "Галерия 33, разположена във Варна, представя изключителна колекция от изящни изкуства. С фокус върху изисканите творби, галерията предлага завладяващо пътуване из света на изящните изкуства. Нейният уебсайт предоставя възможността да се насладите на богатството от изкуство."
     enable_social_media_links: true
     enable_languages: false
