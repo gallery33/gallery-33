@@ -3,7 +3,6 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-{{$limit:= .Params.gallery_limit | default 6 }}
 {{$categories := .Params.categories}} <!-- Define $categories -->
 
 <div class="section">
@@ -11,7 +10,7 @@
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="gallery gallery-single-column">
-          {{ range first $limit .Params.gallery }}
+          {{ range .Params.gallery }}
           <div class="gallery-item">
             <div class="gallery-image"><img src="{{ .image | relURL }}" /></div>
             {{ with .caption }}
@@ -44,9 +43,6 @@
         
         <div class="content">{{ .Content }}</div>
         
-        
-        
-
       </div>
     </div>
   </div>

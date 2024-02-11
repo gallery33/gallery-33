@@ -13,9 +13,9 @@ categories: ["Юри Буков"]
 
 
 
-thumbnail: "images/collection/image-088.jpg"
+thumbnail: "images/uploads/image-088.jpg"
 
 gallery:
-  - image: "images/collection/image-088.jpg"
+  - image: "images/uploads/image-088.jpg"
 ---
 Подписана на гърба Автокъща

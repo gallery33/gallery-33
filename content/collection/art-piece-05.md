@@ -14,9 +14,9 @@ categories: ["Юри Буков"]
 
 
 
-thumbnail: "images/collection/image-087.jpg"
+thumbnail: "images/uploads/image-087.jpg"
 
 gallery:
-  - image: "images/collection/image-087.jpg"
+  - image: "images/uploads/image-087.jpg"
 ---
 Подписана на гърба на подрамката с черен флумастер Разходка Ю. Буков 94.
