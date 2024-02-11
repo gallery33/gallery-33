@@ -8,11 +8,8 @@ media_folder: "static/images/uploads"
 
 collections:
   - name: "exhibition"
-    label: "Exhibition"
+    label: "Изложби"
     folder: "content/exhibitions"
-    media_library:
-      config:
-        media_folder: "/static/images/exhibitions"
     create: true
     slug: "{{Title}}-{{year}}-{{month}}-{{day}}"
     fields:
@@ -30,9 +27,6 @@ collections:
   - name: "art-piece"
     label: "Колекция"
     folder: "content/collection"
-    media_library:
-      config:
-        media_folder: "/static/images/collection"
     create: true
     slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
