@@ -43,7 +43,7 @@ params:
     use_google_fonts: true
     google_fonts_url: "https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300&display=swap"
     use_self_hosted_fonts: false # font files must be placed in /static/fonts folder and the @font-face definitions must be added to /static/fonts/fonts.css
-    heading: "'Montserrat'"
+    heading: "'Montserrat'" 
     base: "'Roboto'"
     monospace: "'Roboto'"
     logo: "'Roboto'"
