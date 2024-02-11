@@ -12,8 +12,8 @@ collections:
     label: "Изложби"
     folder: "content/exhibitions"
     create: true
-    preview_path: "exhibitions/{{slug}}-{{year}}{month}}{day}}{{minute}}{{second}}"
-    slug: "{{slug}}-{{year}}{month}}{day}}{{minute}}{{second}}"
+    preview_path: "exhibitions/{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
+    slug: "{{slug}}-{{year}}{month}}{{day}}{{minute}}{{second}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
       - {label: "Име на изложбата", name: "title", widget: "string"}
@@ -31,8 +31,8 @@ collections:
     label: "Колекция"
     folder: "content/collection"
     create: true
-    preview_path: "collection/{{slug}}-{{year}}{month}}{day}}{{minute}}{{second}}"
-    slug: "{{slug}}-{{year}}{month}}{day}}{{minute}}{{second}}"
+    preview_path: "collection/{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
+    slug: "{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
       - {label: "Наименование", name: "title", widget: "string"}
