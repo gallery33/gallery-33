@@ -6,9 +6,8 @@ logo_url: https://gallery-33.netlify.app/images/favicon/favicon.png
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 media_folder: "static/images/uploads"
 
-collections:
-collections:
 
+collections:
   - name: "exhibition"
     label: "Изложби"
     folder: "content/exhibitions"
