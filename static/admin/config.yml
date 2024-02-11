@@ -11,7 +11,7 @@ collections:
     label: "Exhibition"
     folder: "content/exhibitions"
     media_library:
-      media_folder: "static/images/exhibitions"
+      media_folder: "/static/images/exhibitions"
     create: true
     slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
@@ -30,7 +30,7 @@ collections:
     label: "Колекция"
     folder: "content/collection"
     media_library:
-      media_folder: "static/images/collection"
+      media_folder: "/static/images/collection"
     create: true
     slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
