@@ -25,6 +25,7 @@ collections:
       - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "art-piece"
     label: "Колекция"
@@ -44,3 +45,4 @@ collections:
           {label: "Image", name: "image", widget: "image"}
         ]}
       - {label: "Дата на поста", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
