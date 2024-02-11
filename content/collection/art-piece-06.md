@@ -15,7 +15,7 @@ categories: ["Юри Буков"]
 description: "Кратко описание на парчето, рисунка от автора Юри Буков"
 
 thumbnail: "images/collection/image-088.jpg"
-image: "images/collection/image-088.jpg"
+
 gallery:
   - image: "images/collection/image-088.jpg"
 ---

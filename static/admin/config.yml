@@ -9,21 +9,17 @@ collections:
   - name: "exhibition"
     label: "Exhibition"
     folder: "content/exhibitions"
+    media_folder: "static/images/collection"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Artist", name: "artist", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "ongoing", name: "представя (попълва се с 1 само за случващи се излложби)", widget: "text"}
-
-      - {label: "Gallery Limit", name: "gallery_limit", widget: "number"}
-      - {label: "Permalink", name: "permalink", widget: "string"}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Gallery", name: "gallery", widget: "list", fields: [
+      - {label: "Име на изложбата", name: "title", widget: "string"}
+      - {label: "Участници в изложбата", name: "artist", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
+      - {label: "Дата", name: "date", widget: "datetime"}
+      - {label: "представя (попълва се с 1 само за случващи се излложби)", name: "ongoing", widget: "text"}
+      - {label: "Изображение меню", name: "thumbnail", widget: "image"}
+      - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}
 
@@ -31,15 +27,15 @@ collections:
     label: "Art Piece"
     folder: "content/collection"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
       - {label: "Наименование", name: "Title", widget: "string"}
+      - {label: "Автор(и)", name: "categories", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
       - {label: "година", name: "year", widget: "text"}
       - {label: "Техника(и)", name: "Tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
       - {label: "Размер", name: "size", widget: "text"}
-      - {label: "Categories", name: "Автор(и)", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
-      - {label: "Thumbnail", name: "Картика за листа", widget: "image"}
-      - {label: "Gallery", name: "Заглавна Картинка", widget: "list", fields: [
+      - {label: "Изображение меню", name: "thumbnail", widget: "image"}
+      - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}

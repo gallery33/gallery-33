@@ -9,7 +9,7 @@ weight: 7
 gallery_limit: 3
 permalink: /projects/project-7
 thumbnail: "images/gen/projects/project-3-2.webp"
-image: "images/gen/projects/project-3-2.webp"
+
 
 
 gallery:
