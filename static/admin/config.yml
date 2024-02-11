@@ -7,13 +7,14 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 media_folder: "static/images/uploads"
 
 collections:
+collections:
 
   - name: "exhibition"
     label: "Изложби"
     folder: "content/exhibitions"
     create: true
-    preview_path: "exhibitions/{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
-    slug: "{{slug}}-{{year}}{month}}{{day}}{{minute}}{{second}}"
+    preview_path: "exhibitions/{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
       - {label: "Име на изложбата", name: "title", widget: "string"}
@@ -31,13 +32,13 @@ collections:
     label: "Колекция"
     folder: "content/collection"
     create: true
-    preview_path: "collection/{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
-    slug: "{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
+    preview_path: "collection/{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
       - {label: "Наименование", name: "title", widget: "string"}
       - {label: "Автор(и)", name: "categories", widget: "list", field: {label: "Автор", name: "category", widget: "string"}}
-      - {label: "година на изработка", name: "year", widget: "string"}
+      - {label: "Година на изработка", name: "year", widget: "string"}
       - {label: "Техника(и)", name: "tags", widget: "list", field: {label: "Техника", name: "tag", widget: "string"}}
       - {label: "Размер", name: "size", widget: "string"}
       - {label: "Изображение меню", name: "thumbnail", widget: "image"}
