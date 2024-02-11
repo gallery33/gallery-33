@@ -24,14 +24,14 @@ collections:
         ]}
 
   - name: "art-piece"
-    label: "Art Piece"
+    label: "Колекция"
     folder: "content/collection"
     create: true
     slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
       - {label: "Наименование", name: "Title", widget: "string"}
-      - {label: "Автор(и)", name: "categories", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
+      - {label: "Автор(и)", name: "categories", widget: "list", field: {label: "Автор", name: "category", widget: "string"}}
       - {label: "година", name: "year", widget: "text"}
       - {label: "Техника(и)", name: "Tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
       - {label: "Размер", name: "size", widget: "text"}
