@@ -117,7 +117,7 @@ params:
     enable_menu_footer_secondary: true
     enable_menu_footer_tertiary: false
     footer_primary_menu_title: "Дейност"
-    footer_secondary_menu_title: "Документи"
+    footer_secondary_menu_title: "За нас"
     footer_tertiary_menu_title: "Support"
 
   bottom:
@@ -149,27 +149,20 @@ menu:
       weight: 3
   footer_secondary:
     - name: Контакт
-      pageRef: contact
+      pageRef: contact-guest
       weight: 1
-    - name: За нас
-      pageRef: about
-      weight: 2
     - name: Пространство
       pageRef: space
       weight: 3
     - name: Документи
       pageRef: documents
       weight: 4
-    - name: Интелектуални права и поверителност
+    - name: Уловия и права
       pageRef: terms
       weight: 5
-  bottom:
-    - name: Privacy Policy
-      pageRef: privacy-policy
-      weight: 1
-    - name: Terms and Conditions
-      pageRef: terms-and-conditions
-      weight: 2
+    - name: Поверителност
+      pageRef: privacy
+      weight: 6
 
 permalinks:
   posts: "blog/:year/:month/:title/"

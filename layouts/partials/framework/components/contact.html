@@ -15,7 +15,10 @@
       <strong>Адрес:</strong>
       {{ .contact.address }} 
       
-      {{ if .contact.google_map_text_link }}<a href="{{ .contact.google_map_text_link }}" target="_blank" rel="noreferrer">(Виж на карта)</a> {{ end }}
+
     </div>
   {{ end }}
+  <div class="g-maps-embed">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186126.18272261092!2d27.94290855!3d43.204841099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4538baaf3d7a1%3A0x5727941c71a58b7c!2sVarna!5e0!3m2!1sen!2sbg!4v1707642561626!5m2!1sen!2sbg" width="600" height="450" style="border:20пь;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </div>

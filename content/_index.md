@@ -11,8 +11,8 @@ projects:
   sub_heading: "" # "A collection of our recent work"
   limit: 4
   sort: date # date | weight
-  view_more_button_text: "" # "More Projects"
-  view_more_button_link: "" # "/projects"
+  view_more_button_text: "вижте още"
+  view_more_button_link: "/exhibitions" # "/blog"
   columns: 2 # 1 | 2 | 3 | 4
 
 posts:
