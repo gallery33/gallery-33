@@ -12,7 +12,6 @@ size: "80 х 100 см"
 categories: ["Юри Буков"]
 
 
-description: "Кратко описание на парчето, рисунка от автора Юри Буков"
 
 thumbnail: "images/collection/image-088.jpg"
 

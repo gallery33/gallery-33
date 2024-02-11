@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: master 
 logo_url: https://gallery-33.netlify.app/images/favicon/favicon.png
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+ # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/images/uploads"
 
 collections:
   - name: "exhibition"
@@ -16,8 +17,9 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
       - {label: "Име на изложбата", name: "title", widget: "string"}
       - {label: "Участници в изложбата", name: "artist", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
-      - {label: "Дата", name: "date", widget: "datetime"}
-      - {label: "представя (попълва се с 1 само за случващи се излложби)", name: "ongoing", widget: "text"}
+      - {label: "Продължителност на изложбата", name: "when", widget: "string"}
+      - {label: "Дата на поста", name: "date", widget: "datetime"}
+      - {label: "представя (попълва се с 1 само за случващи се излложби)", name: "ongoing", widget: "string"}
       - {label: "Изображение меню", name: "thumbnail", widget: "image"}
       - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
@@ -26,16 +28,18 @@ collections:
   - name: "art-piece"
     label: "Колекция"
     folder: "content/collection"
+    media_folder: "static/image/collection"
     create: true
     slug: "{{ .Title }}-{{year}}-{{month}}-{{day}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
-      - {label: "Наименование", name: "Title", widget: "string"}
+      - {label: "Наименование", name: "title", widget: "string"}
       - {label: "Автор(и)", name: "categories", widget: "list", field: {label: "Автор", name: "category", widget: "string"}}
-      - {label: "година", name: "year", widget: "text"}
+      - {label: "година на изработка", name: "year", widget: "string"}
       - {label: "Техника(и)", name: "Tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-      - {label: "Размер", name: "size", widget: "text"}
+      - {label: "Размер", name: "size", widget: "string"}
       - {label: "Изображение меню", name: "thumbnail", widget: "image"}
       - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}
+      - {label: "Дата на поста", name: "date", widget: "datetime"}

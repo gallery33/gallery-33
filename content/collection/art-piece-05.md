@@ -10,12 +10,12 @@ tags: ["маслени бои", "платно"]
 size: "87,5 х 114,5 см"
 
 categories: ["Юри Буков"]
-role: "Artist"
 
-description: "Кратко описание на парчето, рисунка от автора Юри Буков"
+
+
 
 thumbnail: "images/collection/image-087.jpg"
-image: "images/collection/image-087.jpg"
+
 gallery:
   - image: "images/collection/image-087.jpg"
 ---
