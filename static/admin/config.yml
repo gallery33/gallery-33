@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master 
-  
+logo_url: https://gallery-33.netlify.app/images/favicon/favicon.png
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -34,12 +34,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "art-piece"}
-      - {label: "Title", name: "Наименование", widget: "string"}
-      - {label: "Year", name: "година", widget: "string"}
-      - {label: "Tags", name: "Техника(и)", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-      - {label: "Size", name: "Размер", widget: "string"}
+      - {label: "Наименование", name: "Title", widget: "string"}
+      - {label: "година", name: "year", widget: "text"}
+      - {label: "Техника(и)", name: "Tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+      - {label: "Размер", name: "size", widget: "text"}
       - {label: "Categories", name: "Автор(и)", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
-      - {label: "Description", name: "описание (не е задължително)", widget: "text"}
       - {label: "Thumbnail", name: "Картика за листа", widget: "image"}
       - {label: "Gallery", name: "Заглавна Картинка", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
