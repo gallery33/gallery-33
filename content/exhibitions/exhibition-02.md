@@ -5,9 +5,7 @@ artist: ["Пещо Гошо", "test ime"]
 when: "21.03 - 03.05.2023"
 
 date: 2021-08-15
-weight: 7
-gallery_limit: 3
-permalink: /projects/project-7
+
 thumbnail: "images/gen/projects/project-3-2.webp"
 
 
