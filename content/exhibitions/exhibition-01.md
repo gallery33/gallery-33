@@ -3,7 +3,7 @@ layout: exhibition
 title: The Golf Course as Landscape Art
 artist:
   - John Yang
-  - "1"
+  - photography
 permalink: /projects/project-7
 thumbnail: /images/uploads/2011_68_267_450585_displaysize.jpg
 gallery_limit: 3
