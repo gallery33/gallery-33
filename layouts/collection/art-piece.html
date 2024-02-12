@@ -61,5 +61,42 @@
     </div>
   </div>
 </div>
+{{ $currentPostCategories := .Params.categories }}
+{{ $posts := where .Site.RegularPages "Section" "collection" }}
+{{ $limit := 3 }}
+{{ $sort_by := .Params.posts.sort | default "date" }}
+{{ $sorted_posts := $posts.ByDate.Reverse }}
+{{ if eq $sort_by "weight" }}{{ $sorted_posts = $posts.ByWeight }}{{ end }}
+{{ $postColumns := 3 }}
+{{ if gt $sorted_posts.Len 0 }}
+    <div class="section section-base-bg-2">
+        <div class="container">
+            <div class="row">
+                {{ $categoryHeading := printf "Още от %s" (index .Params.categories 0) }}
+                {{ partial "framework/grid/grid-header.html" (dict "heading" $categoryHeading "sub_heading" "") }}
+                {{ range $index, $card := first $limit $sorted_posts }}
+                    {{ $categories := intersect $card.Params.categories $currentPostCategories }}
+                    {{ if $categories }}
+                        <div class="col-12 col-md-6 col-lg-{{ div 12 $postColumns }} mb-gutter mt-gutter {{ if eq $index 0 }}mt-0{{ else if eq $index (sub (len (first $limit $sorted_posts)) 1) }} mb-0{{ end }} mt-md-0">
+                            {{ with $card.Params.thumbnail }}
+                                <div class="summary-thumbnail-artpiece">
+                                    <a href="{{ $card.RelPermalink }}"><img alt="{{ $card.Title }}" src="{{ . | relURL }}"></a>
+                                </div>
+                            {{ end }}
+                            {{ partial "theme/summary-post.html" (dict "page" $card ) }}
+                        </div>
+                    {{ end }}
+                {{ end }}
+                {{ if .Params.categories }}
+                    {{ $category := index .Params.categories 0 }}
+                    {{ $categoryPage := printf "/categories/%s" ($category | urlize) | relLangURL }}
+                    {{ partial "framework/grid/grid-footer.html" (dict "view_more_button_text" "Виж още" "view_more_button_link" $categoryPage) }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+
 
 {{ end }}
