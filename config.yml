@@ -157,7 +157,7 @@ menu:
     - name: Документи
       pageRef: documents
       weight: 4
-    - name: Уловия и права
+    - name: Условия и права
       pageRef: terms
       weight: 5
     - name: Поверителност

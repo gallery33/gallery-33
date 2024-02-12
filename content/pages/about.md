@@ -1,9 +1,7 @@
 ---
 title: "About Us"
 date: 2018-11-28T15:15:34+10:00
-description: "Business plan hackathon handshake responsive web design."
-url: /about
-image: "images/gen/content/content-5.webp"
+
 ---
 
 # Creating Modern Websites

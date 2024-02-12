@@ -12,8 +12,7 @@ collections:
     label: "Изложби"
     folder: "content/exhibitions"
     create: true
-    preview_path: "exhibitions/{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
-    slug: "{{slug}}-{{year}}-{{month}}-{{day}}-{{minute}}-{{second}}"
+    slug: "{{slug}}-{{year}}{{month}}{{day}}{{minute}}{{second}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
       - {label: "Име на изложбата", name: "title", widget: "string"}
@@ -46,3 +45,15 @@ collections:
         ]}
       - {label: "Дата на поста", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "About Us"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+
+
+
