@@ -1,9 +1,9 @@
 ---
-title: "Curate is a premium portfolio for <strong>Hugo</strong>"
+title: "Галерия 33"
 date: 2023-11-02T17:54:55+02:00
-description: "Showcase your projects, work or case studies in style with this markdown powered portfolio theme for Hugo."
-meta_description: "Hugo Curate is a premium Hugo blog theme"
-meta_title: Hugo Curate - Premium Portfolio Theme
+
+meta_description: "Комесиална галерия в сърцето на варна"
+meta_title: Галерия 33
 subscribe: false
 
 projects:
