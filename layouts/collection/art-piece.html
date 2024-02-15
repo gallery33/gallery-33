@@ -53,10 +53,13 @@
         <div class="content">{{ .Content }}</div>
 
         <a href="/contact?title={{ .Title | urlize }}&category={{ with .Params.categories }}{{ index . 0 | urlize }}{{ end }}&date={{ .Date.Format "(20060102)" }}">
-          <div class="form-group">
-            <input type="submit" name="submit" class="button button-primary" value="{{ "Запитване" }}" />
-          </div>
+          {{ if not .Params.sold }}
+            <div class="form-group">
+              <input type="submit" name="submit" class="button button-primary" value="{{ "Запитване" }}" />
+            </div>
+          {{ end }}
         </a>
+        
       </div>
     </div>
   </div>
