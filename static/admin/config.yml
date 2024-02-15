@@ -16,7 +16,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "exhibition"}
       - {label: "Име на изложбата", name: "title", widget: "string"}
-      - {label: "Участници в изложбата", name: "artist", widget: "list", field: {label: "Category", name: "category", widget: "string"}}
+      - {label: "Участници в изложбата", name: "artist", widget: "list", field: {label: "Артист", name: "category", widget: "string"}}
       - {label: "Продължителност на изложбата", name: "when", widget: "string"}
       - {label: "Дата на поста", name: "date", widget: "datetime"}
       - {label: "представя (попълва се с 1 само за случващи се излложби)", name: "ongoing", widget: "string"}
