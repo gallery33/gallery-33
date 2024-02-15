@@ -44,7 +44,8 @@ collections:
           {label: "Image", name: "image", widget: "image"}
         ]}
       - {label: "Дата на поста", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Допълнителен текст", name: "body", widget: "markdown"}
+      - {label: "Дали е продадена (true/false)", name: "sold", widget: "boolean"}
 
   - name: "pages"
     label: "About Us"
