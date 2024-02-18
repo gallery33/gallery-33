@@ -1,5 +1,6 @@
-baseURL: /
+baseURL: http://gallery33.art/
 title: Галерия 33
+
 
 paginate: 6
 enableGitInfo: false
