@@ -23,33 +23,11 @@
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
 
-    {{ if .Site.Menus.main }}
-        {{ partial "framework/menu/menu-main-mobile.html" . }}
-    {{ end }}
-
-    <header id="header" class='header {{ if .Site.Params.header.fixed }}header-fixed{{ end }} {{ if .Params.header_transparent }}header-transparent{{ end }} {{ block "header_classes" . }}{{ end }}'>
-        {{ partial "framework/header/header.html" . }}
-    </header>
 
     <div id="wrapper" class="wrapper">
         {{ block "main" . }}{{ end }}
     </div>
 
-    {{ partial "framework/footer/footer.html" . }}
-    {{ partial "framework/footer/bottom.html" . }}
-
-    {{ partial "framework/js/darkmode.html" . }}
-    {{ partial "framework/js/global.html" . }}
-    {{ partial "framework/js/custom.html" . }}
-
-    {{ block "footer_js" . }}{{ end }}
-
-    {{ partial "framework/cookies/cookie-consent.html" . }}
-
-    {{ partial "framework/analytics/google-analytics.html" . }}
-    {{ partial "framework/analytics/plausible-analytics.html" . }}
-    {{ partial "framework/analytics/umami-analytics.html" . }}
-    {{ partial "framework/analytics/google-tag-manager.html" . }}
 
     <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
 <script>addBackToTop({

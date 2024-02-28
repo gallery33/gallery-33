@@ -3,7 +3,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.footer_primary }}
             <li class="menu-item-{{ .Name | urlize }}{{ if $currentPage.IsMenuCurrent "footer_primary" . }} active{{ end }}">
-                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                {{ .Name }}
             </li>
         {{end}}
     </ul>

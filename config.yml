@@ -71,11 +71,11 @@ params:
     header_height: "60px"
     header_menu_font_size: "18px"
 
-  open_graph:
-    og_type: "website"
-    og_twitter_card: "summary"
-    og_twitter_site: "@zerostaticio"
-    og_twitter_creator: "@zerostaticio"
+  # open_graph:
+  #   og_type: "website"
+  #   og_twitter_card: "summary"
+  #   og_twitter_site: "@zerostaticio"
+  #   og_twitter_creator: "@zerostaticio"
 
   dark_mode:
     enable_dark_mode: false
@@ -90,10 +90,10 @@ params:
   analytics:
     google_analytics_id: "" # G-XXXXXXXXXX
 
-  newsletter:
-    mailchimp:
-      form_action_url: https://zerostatic.us21.list-manage.com/subscribe/post?u=798e19886b83aaab346734382&amp;id=f1c526a772&amp;f_id=0027e3e6f0
-      form_title: "Let's keep in touch"
+  # newsletter:
+  #   mailchimp:
+  #     form_action_url: https://zerostatic.us21.list-manage.com/subscribe/post?u=798e19886b83aaab346734382&amp;id=f1c526a772&amp;f_id=0027e3e6f0
+  #     form_title: "Let's keep in touch"
 
   contact_form:
     use_netlify_form: true
@@ -110,16 +110,16 @@ params:
   footer:
     enable_footer: true # show/hide the entire footer
     footer_title: "ГАЛЕРИЯ 33"
-    footer_description: "Галерия 33, разположена във Варна, представя изключителна колекция от изящни изкуства. С фокус върху изисканите творби, галерията предлага завладяващо пътуване из света на изящните изкуства. Нейният уебсайт предоставя възможността да се насладите на богатството от изкуство."
+    footer_description: "“Галерия 33“ е най-новата галерия в сърцето на Варна. Тя отваря врати на 3 март 2024 г. Основателите на галерията, след години опит, решават да създадат свое пространство за модерно и съвременно изкуство. Тя се намира в централата стара част на Варна на ул. “Габрово” 2А, в прекрасна сграда от началото на миналия век."
     enable_social_media_links: true
     enable_languages: false
     enable_copyright: true
     enable_menu_footer_primary: true
     enable_menu_footer_secondary: true
-    enable_menu_footer_tertiary: false
-    footer_primary_menu_title: "Дейност"
-    footer_secondary_menu_title: "За нас"
-    footer_tertiary_menu_title: "Support"
+    enable_menu_footer_tertiary: true
+    footer_primary_menu_title: "Работно време"
+    footer_secondary_menu_title: "Дейност"
+    footer_tertiary_menu_title: "За нас"
 
   bottom:
     enabled: false # show/hide the entire bottom (below the footer)
@@ -132,38 +132,54 @@ menu:
     - name: Изложби
       pageRef: exhibitions
       weight: 1
-    - name: Колекция
-      pageRef: collection
-      weight: 2
-    - name: Дейност
+    # - name: Колекция
+    #   pageRef: collection
+    #   weight: 2
+    - name: За нас
       pageRef: about
       weight: 4
   footer_primary:
+    - name: "Почивен - Понеделник"
+      weight: 1
+    - name: "Почивен - Вторник"
+      weight: 2
+    - name: "10:00-19:00 - Сряда"
+      weight: 3
+    - name: "10:00-19:00 - Четвъртък"
+      weight: 4
+    - name: "10:00-19:00 - Петък"
+      weight: 5
+    - name: "10:00-20:00 - Събота"
+      weight: 6     
+    - name: "10:00-20:00 - Неделя"
+      weight: 7                             
+  footer_secondary:
     - name: "Изложби"
       pageRef: exhibitions
       weight: 1
-    - name: "Колекция"
-      pageRef: collection
-      weight: 2
-    - name: "Патрон 33"
-      pageRef: patron33
-      weight: 3
-  footer_secondary:
+    # - name: "Колекция"
+    #   pageRef: collection
+    #   weight: 2
+    # - name: "Патрон 33"
+    #   pageRef: patron33
+    #   weight: 3
+  footer_tertiary:
     - name: Контакт
       pageRef: contact-guest
       weight: 1
-    - name: Пространство
-      pageRef: space
-      weight: 3
-    - name: Документи
-      pageRef: documents
-      weight: 4
+    # - name: Пространство
+    #   pageRef: space
+    #   weight: 3
+    # - name: Документи
+    #   pageRef: documents
+    #   weight: 4
     - name: Условия и права
       pageRef: terms
       weight: 5
     - name: Поверителност
       pageRef: privacy
       weight: 6
+
 
 permalinks:
   posts: "blog/:year/:month/:title/"
