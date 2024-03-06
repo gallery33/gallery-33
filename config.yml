@@ -110,7 +110,7 @@ params:
   footer:
     enable_footer: true # show/hide the entire footer
     footer_title: "ГАЛЕРИЯ 33"
-    footer_description: "“Галерия 33“ е най-новата галерия в сърцето на Варна. Тя отваря врати на 3 март 2024 г. Основателите на галерията, след години опит, решават да създадат свое пространство за модерно и съвременно изкуство. Тя се намира в централата стара част на Варна на ул. “Габрово” 2А, в прекрасна сграда от началото на миналия век."
+    footer_description: "“Галерия 33“ е най-новата галерия в сърцето на Варна. Тя отваря врати на 3 март 2024 г. Основателите на галерията, след години опит, решават да създадат свое пространство за модерно и съвременно изкуство. Галерията се намира в централата стара част на Варна на ул. “Габрово” 2А, в прекрасна сграда от началото на миналия век."
     enable_social_media_links: true
     enable_languages: false
     enable_copyright: true
@@ -119,7 +119,7 @@ params:
     enable_menu_footer_tertiary: true
     footer_primary_menu_title: "Работно време"
     footer_secondary_menu_title: "Дейност"
-    footer_tertiary_menu_title: "За нас"
+    footer_tertiary_menu_title: "За нас1"
 
   bottom:
     enabled: false # show/hide the entire bottom (below the footer)
