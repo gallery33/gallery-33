@@ -69,7 +69,7 @@ params:
   header:
     fixed: false
     header_height: "60px"
-    header_menu_font_size: "18px"
+    header_menu_font_size: "12px"
 
   # open_graph:
   #   og_type: "website"
