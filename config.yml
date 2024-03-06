@@ -1,5 +1,5 @@
 baseURL: http://gallery33.art/
-title: Галерия 33
+title: Gallery 33
 
 
 paginate: 6
@@ -63,7 +63,7 @@ params:
     show_logo_image_on_desktop: true
     show_logo_text_on_mobile: false
     show_logo_text_on_desktop: true
-    logo_text_font_size: "28px"
+    logo_text_font_size: "20px"
     logo_text_font_weight: "500"
 
   header:
@@ -164,7 +164,7 @@ menu:
     #   pageRef: patron33
     #   weight: 3
   footer_tertiary:
-    - name: Контакт
+    - name: Контакти
       pageRef: contact-guest
       weight: 1
     # - name: Пространство
@@ -173,7 +173,7 @@ menu:
     # - name: Документи
     #   pageRef: documents
     #   weight: 4
-    - name: Условия и права
+    - name: Общи условия
       pageRef: terms
       weight: 5
     - name: Поверителност
