@@ -19,6 +19,17 @@
     {{ partial "framework/head/fonts.html" . }}
 
     {{ block "header_css" . }}{{ end }}
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
