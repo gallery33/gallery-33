@@ -1,5 +1,5 @@
 baseURL: http://gallery33.art/
-title: Галерия 33
+title: Gallery 33
 
 
 paginate: 6
@@ -65,7 +65,7 @@ params:
     show_logo_image_on_desktop: true
     show_logo_text_on_mobile: false
     show_logo_text_on_desktop: true
-    logo_text_font_size: "28px"
+    logo_text_font_size: "20px"
     logo_text_font_weight: "500"
 
   header:
@@ -137,23 +137,26 @@ menu:
     # - name: Колекция
     #   pageRef: collection
     #   weight: 2
+     # - name: Архив
+    #   pageRef: archive
+    #   weight: 3
     - name: За нас
       pageRef: about
       weight: 4
   footer_primary:
-    - name: "Почивен - Понеделник"
+    - name: "Понеделник - Почивен ден"
       weight: 1
-    - name: "Почивен - Вторник"
+    - name: "Вторник - Почивен ден"
       weight: 2
-    - name: "10:00-19:00 - Сряда"
+    - name: "Сряда - 10:00 - 19:00"
       weight: 3
-    - name: "10:00-19:00 - Четвъртък"
+    - name: "Четвъртък - 10:00 - 19:00"
       weight: 4
-    - name: "10:00-19:00 - Петък"
+    - name: "Петък - 10:00 - 19:00"
       weight: 5
-    - name: "10:00-20:00 - Събота"
+    - name: "Събота - 10:00 - 19:00"
       weight: 6     
-    - name: "10:00-21:00 - Неделя"
+    - name: "Неделя - 10:00 - 19:00"
       weight: 7                             
   footer_secondary:
     - name: "Изложби"
@@ -166,7 +169,7 @@ menu:
     #   pageRef: patron33
     #   weight: 3
   footer_tertiary:
-    - name: Контакт
+    - name: Контакти
       pageRef: contact-guest
       weight: 1
     # - name: Пространство
@@ -175,7 +178,7 @@ menu:
     # - name: Документи
     #   pageRef: documents
     #   weight: 4
-    - name: Условия и права
+    - name: Общи условия
       pageRef: terms
       weight: 5
     - name: Поверителност
