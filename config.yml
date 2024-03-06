@@ -151,7 +151,7 @@ menu:
       weight: 5
     - name: "10:00-20:00 - Събота"
       weight: 6     
-    - name: "10:00-20:00 - Неделя"
+    - name: "10:00-21:00 - Неделя"
       weight: 7                             
   footer_secondary:
     - name: "Изложби"
