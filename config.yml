@@ -71,7 +71,7 @@ params:
 
   header:
     fixed: false
-    header_height: "30px"
+    header_height: "28px"
     header_menu_font_size: "18px"
 
   # open_graph:
