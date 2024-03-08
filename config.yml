@@ -163,9 +163,9 @@ menu:
     - name: "Изложби"
       pageRef: exhibitions
       weight: 1
-    # - name: "Колекция"
-    #   pageRef: collection
-    #   weight: 2
+     - name: "Колекция"
+       pageRef: collection
+       weight: 2
     # - name: "Патрон 33"
     #   pageRef: patron33
     #   weight: 3
