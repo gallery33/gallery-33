@@ -135,12 +135,12 @@ menu:
     - name: Изложби
       pageRef: exhibitions
       weight: 1
-    # - name: Колекция
-    #   pageRef: collection
-    #   weight: 2
-     # - name: Архив
-    #   pageRef: archive
-    #   weight: 3
+    - name: Колекция
+      pageRef: collection
+      weight: 2
+    - name: Архив
+      pageRef: archive
+      weight: 3
     - name: За нас
       pageRef: about
       weight: 4
@@ -163,9 +163,9 @@ menu:
     - name: "Изложби"
       pageRef: exhibitions
       weight: 1
-     - name: "Колекция"
-       pageRef: collection
-       weight: 2
+    - name: "Колекция"
+      pageRef: collection
+      weight: 2
     # - name: "Патрон 33"
     #   pageRef: patron33
     #   weight: 3
