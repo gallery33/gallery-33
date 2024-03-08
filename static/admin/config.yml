@@ -39,8 +39,8 @@ collections:
       - {label: "Година на изработка", name: "year", widget: "string"}
       - {label: "Техника(и)", name: "tags", widget: "list", field: {label: "Техника", name: "tag", widget: "string"}}
       - {label: "Размер", name: "size", widget: "string"}
-      - {label: "Изображение меню", name: "thumbnail", widget: "image"}
-      - {label: "Изображение(я) страница", name: "gallery", widget: "list", fields: [
+      - {label: "Изображение меню ЗАДЪЛЖИТЕЛНО", name: "thumbnail", widget: "image"}
+      - {label: "Изображение(я) страница ЗАДЪЛЖИТЕЛНО", name: "gallery", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"}
         ]}
       - {label: "Дата на поста", name: "date", widget: "datetime"}

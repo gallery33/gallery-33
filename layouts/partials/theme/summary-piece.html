@@ -18,9 +18,10 @@
   <div class="summary-content">
     <div class="summary-title">
       <h2>
-        <a href="{{ $url }}">{{ $title }} - 
+        <a href="{{ $url }}"> 
         {{ range $index, $category := $categories }}
           {{ $category }}{{ if lt $index (sub (len $categories) 1) }},{{ end }}
+          - {{ $title }}
         {{ end }}
       </a>
       </h2>
