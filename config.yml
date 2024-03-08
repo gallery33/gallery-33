@@ -138,9 +138,9 @@ menu:
     - name: Колекция
       pageRef: collection
       weight: 2
-    - name: Архив
-      pageRef: archive
-      weight: 3
+    # - name: Архив
+    #  pageRef: archive
+    #  weight: 3
     - name: За нас
       pageRef: about
       weight: 4
