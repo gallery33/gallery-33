@@ -17,3 +17,15 @@
 //     height: 53vh;
 //   }
   
+.header {
+    padding: 20px 0;
+}
+
+.summary .summary-thumbnail {
+    max-height: none;
+}
+
+.summary.summary-project,
+.summary.summary-project .summary-thumbnail {
+    border-radius: 0;
+}
