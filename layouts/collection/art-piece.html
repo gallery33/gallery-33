@@ -32,6 +32,15 @@
           </div>
         {{ end }}
 
+        {{ if .Params.genres }}
+          <div class="mb-2">
+            {{ partial "framework/blog/post-genre.html" . }}
+            <!-- {{ range .Params.genres  }}
+              <a href="{{ "/genres/" | absURL }}{{ . | urlize }}"> {{ . }}</a>
+            {{ end }} -->
+          </div>
+        {{ end }}
+
         {{ with .Params.year }}
         <div class="project-client">
           <strong>Година: </strong><span>{{ . }}</span>

@@ -16,9 +16,13 @@
 //     max-width: 100%;
 //     height: 53vh;
 //   }
-  
+
+body {
+    font-size: 14px;
+}
 .header {
     padding: 20px 0;
+    margin-bottom: 80px;
 }
 
 .summary .summary-thumbnail {
@@ -28,4 +32,9 @@
 .summary.summary-project,
 .summary.summary-project .summary-thumbnail {
     border-radius: 0;
+}
+
+.footer {
+    padding: 20px 0;
+    font-size: 13px;
 }

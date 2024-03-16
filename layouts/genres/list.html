@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        {{ partial "framework/sections/heading/heading.html" (dict "title" .Title "description" .Description "image"
+        .Params.image "badge" "Вид") }}
+        {{/*  заглавие на категорията  */}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ $projects := where .Site.RegularPages "Section" "collection" }}
+{{ if ne $projects.Len 0 }}
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row">
+                {{ $filteredProjects := where $projects "Params.genres" "intersect" (slice .Title) }}
+                {{ range $index, $card := $filteredProjects }}
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        {{ partial "theme/summary-piece.html" (dict "page" $card) }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}
+{{ end }}
