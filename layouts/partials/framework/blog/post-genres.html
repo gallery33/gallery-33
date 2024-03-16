@@ -1,0 +1,8 @@
+{{ if .Params.genres }}
+<div class="post-genres">
+    <strong>genres:</strong>
+    {{ range .Params.genres }}
+        <a class="post-category" href="{{ "/genres/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}

@@ -57,6 +57,81 @@
   src: url("./inter/InterVariable-Italic.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: 'CenturyGothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./century-gothic/Century-Gothic.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./century-gothic/Century-Gothic-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./century-gothic/Century-Gothic-Italic.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./century-gothic/Century-Gothic-Bold-Italic.otf") format("otf");
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-weight: 400;
+  src: url('./century-gothic/CenturyGothic.eot');
+  src: url('./century-gothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+  url('./century-gothic/CenturyGothic.woff2') format('woff2'),
+  url('./century-gothic/CenturyGothic.woff') format('woff'),
+  url('./century-gothic/CenturyGothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-weight: 700;
+  src: url('./century-gothic/CenturyGothic-Bold.eot');
+  src: url('./century-gothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./century-gothic/CenturyGothic-Bold.woff2') format('woff2'),
+  url('./century-gothic/CenturyGothic-Bold.woff') format('woff'),
+  url('./century-gothic/CenturyGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-weight: 400;
+  font-style: italic;
+  src: url('./century-gothic/CenturyGothic-Italic.eot');
+  src: url('./century-gothic/CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'),
+  url('./century-gothic/CenturyGothic-Italic.woff2') format('woff2'),
+  url('./century-gothic/CenturyGothic-Italic.woff') format('woff'),
+  url('./century-gothic/CenturyGothic-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  font-weight: 700;
+  font-style: italic;
+  src: url('./century-gothic/CenturyGothic-BoldItalic.eot');
+  src: url('./century-gothic/CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('./century-gothic/CenturyGothic-BoldItalic.woff2') format('woff2'),
+  url('./century-gothic/CenturyGothic-BoldItalic.woff') format('woff'),
+  url('./century-gothic/CenturyGothic-BoldItalic.ttf') format('truetype');
+}
+
+
 /* static fonts */
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("./inter/Inter-Thin.woff2") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: italic; font-weight: 100; font-display: swap; src: url("./inter/Inter-ThinItalic.woff2") format("woff2"); }

@@ -1,0 +1,12 @@
+{{ if .Params.genres }}
+<div class="post-genres">
+    {{ $genres := slice }}
+    {{ range $index, $genre := .Params.genres }}
+        {{ $genres = $genres | append $genre }}
+    {{ end }}
+    {{ range $index, $genre := $genres }}
+        {{ if ne $index 0 }}, {{ end }}
+        <a class="post-genre" href="{{ "/genres/" | relLangURL }}{{ $genre | urlize }}">{{ $genre }}</a>
+    {{ end }}
+</div>
+{{ end }}
