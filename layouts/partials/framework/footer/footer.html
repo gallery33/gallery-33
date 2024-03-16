@@ -50,18 +50,18 @@
                             <h3>{{ .Site.Params.footer.footer_tertiary_menu_title }}</h3>
                             {{ end }}
                             {{ partial "framework/menu/menu-footer-tertiary.html" . }}
+
+                            {{ if and .Site.Params.footer.enable_social_media_links .Site.Data.social }}
+                            <div class="">
+                                {{ partial "framework/components/social" . }}
+                            </div>
+                            {{ end }}
                         </div>
                     </div>
                     {{ end }}
 
                 </div>
             </div>
-
-            {{ if and .Site.Params.footer.enable_social_media_links .Site.Data.social }}
-            <div class="col-12 col-md-4">
-                {{ partial "framework/components/social" . }}
-            </div>
-            {{ end }}
         </div>
 
         <div class="row justify-content-end">

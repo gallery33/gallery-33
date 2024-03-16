@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
-  branch: develop
-local_backend: true 
+  branch: master
 logo_url: https://gallery33.art/images/favicon/favicon.png
  # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
