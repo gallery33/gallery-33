@@ -3,6 +3,8 @@ layout: art-piece
 title: Някой да е виждал тук Анубис / Quelqu`un a vu isi  Anubis
 categories:
   - Михаил Коевчинов
+genres:
+  - Графика
 year: 1993 г.
 tags:
   - Смесена техника
