@@ -164,7 +164,7 @@ menu:
   footer_primary:
     - name: "Понеделник - Почивен ден"
       weight: 1
-    - name: "Вторник - Почивен ден"
+    - name: "Вторник - 10:00 - 19:00"
       weight: 2
     - name: "Сряда - 10:00 - 19:00"
       weight: 3
@@ -172,9 +172,9 @@ menu:
       weight: 4
     - name: "Петък - 10:00 - 19:00"
       weight: 5
-    - name: "Събота - 10:00 - 19:00"
+    - name: "Събота - 11:00 - 19:00"
       weight: 6     
-    - name: "Неделя - 10:00 - 19:00"
+    - name: "Неделя - Почивен ден"
       weight: 7                             
   footer_secondary:
     - name: "Изложби"
