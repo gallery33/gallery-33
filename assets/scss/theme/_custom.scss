@@ -27,12 +27,12 @@
 .heading {
   .heading-heading {
     h1 {
-      font-size: 36px;
+      font-size: 28px;
       letter-spacing: -1px;
       line-height: 1.1;
-      font-weight: 700;
+      font-weight: 400;
       @include media-breakpoint-up(md) {
-        font-size: 86px;
+        font-size: 40px;
         line-height: 1;
         width: 80%;
         letter-spacing: -2px;
@@ -76,7 +76,7 @@
 
 .dropdown-menu {
   left: initial;
-  background-color: var(--color-base-bg-2);
+  background-color: #fff;
   box-shadow: rgba(17, 17, 17, 0.1) 0px 20px 25px -5px,
     rgba(17, 17, 17, 0.04) 0px 10px 10px -5px;
   html[data-bs-theme="dark"] & {

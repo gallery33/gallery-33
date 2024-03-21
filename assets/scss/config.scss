@@ -15,8 +15,8 @@
   --color-base-text-2: {{ .Site.Params.colors.base_text_2 | default "#4b5563" }};
   --color-header-text:  {{ .Site.Params.colors.header_text | default "#111827" }};
   
-  --logo-text-font-size: {{ .Site.Params.logo.logo_text_font_size | default "28px" }};
-  --logo-text-font-weight: {{ .Site.Params.logo.logo_text_font_weight | default "500" }};
+  --logo-text-font-size: {{ .Site.Params.logo.logo_text_font_size | default "34px" }};
+  --logo-text-font-weight: {{ .Site.Params.logo.logo_text_font_weight | default "400" }};
   --header-height: {{ .Site.Params.header.header_height | default "60px" }};
 
   --menu-font-family: {{ .Site.Params.fonts.base }}, sans-serif;

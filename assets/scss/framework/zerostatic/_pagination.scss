@@ -7,7 +7,7 @@
   li {
     list-style: none;
     text-decoration: none;
-    border: 1px solid var(--color-primary-bg);
+    border: 1px solid #a5a17b;
     border-right: none;
     text-align: center;
     vertical-align: middle;
@@ -15,10 +15,10 @@
     span {
       padding: 8px 12px;
       display: block;
-      color: var(--color-primary-bg);
+      color: #a5a17b;
       text-decoration: none;
       &:hover {
-        background-color: var(--color-primary-bg);
+        background-color: #a5a17b;
         opacity: 0.8;
         color: var(--color-primary-text);
       }
@@ -26,14 +26,14 @@
     &.pagination-item-current {
       a,
       span {
-        background-color: var(--color-primary-bg);
+        background-color: #a5a17b;
         color: var(--color-primary-text);
       }
     }
     &:last-of-type {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
-      border-right: 1px solid var(--color-primary-bg);
+      border-right: 1px solid #a5a17b;
     }
     &:first-of-type {
       border-top-left-radius: 3px;

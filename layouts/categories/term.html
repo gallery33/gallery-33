@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row-custom-masonry">
                 <!-- {{ $filteredProjects := where $projects "Params.genres" "intersect" (slice .Title) }} -->
-                {{ $paginator := .Paginate (where $projects "Params.genres" "intersect" (slice .Title)) }}
+                {{ $paginator := .Paginate (where $projects "Params.categories" "intersect" (slice .Title)) }}
                 {{ range $index, $card := $paginator.Pages }}
                     <div class="item-custom-masonry">
                         {{ partial "theme/summary-piece.html" (dict "page" $card) }}

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        {{ partial "framework/sections/heading/heading.html" (dict "title" "Автори") }}
+        {{/*  заглавие на категорията  */}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ $projects := where .Site.RegularPages "Section" "collection" }}
+{{ if ne $projects.Len 0 }}
+    <div class="section pt-0">
+        <div class="container">
+            <div class="row">
+              <div class="name-list">
+                {{range sort ($.Site.GetPage "taxonomyTerm" "categories").Pages "Title" }}
+                    <a href="{{.Permalink}}">{{.Title}}</a></li>
+                {{end}}
+            </div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+{{ end }}
