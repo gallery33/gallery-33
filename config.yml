@@ -2,7 +2,7 @@ baseURL: http://gallery33.art/
 title: Gallery 33
 
 
-paginate: 6
+paginate: 20
 enableGitInfo: false
 pygmentsCodeFences: true
 pygmentsCodefencesGuessSyntax: true
@@ -53,7 +53,7 @@ params:
     logo: "'CenturyGothic'"
 
   logo:
-    logo_text: "ГАЛЕРИЯ"
+    logo_text: "Gallery"
     logo_image_desktop: images/logo/logo.png
     logo_image_mobile: images/logo/logo-mobile.png
     logo_image_desktop_invert: images/logo/logo-invert.png
@@ -66,8 +66,8 @@ params:
     show_logo_image_on_desktop: true
     show_logo_text_on_mobile: false
     show_logo_text_on_desktop: true
-    logo_text_font_size: "40px"
-    logo_text_font_weight: "500"
+    logo_text_font_size: "34px"
+    logo_text_font_weight: "400"
 
   header:
     fixed: false
@@ -155,9 +155,9 @@ menu:
       pageRef: /genres/други
       parent: collection
       weight: 4
-    # - name: Архив
-    #  pageRef: archive
-    #  weight: 3
+    - name: Автори
+      pageRef: categories/
+      weight: 3
     - name: За нас
       pageRef: about
       weight: 4
@@ -212,7 +212,6 @@ taxonomies:
   tag: tags
   category: categories
   genre: genres
-
 
 markup:
   goldmark:

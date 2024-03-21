@@ -3,20 +3,23 @@
 {{ define "header_classes" }}{{ end }}
 
 {{ define "main" }}
-    <div class="section">
-    </div>
-
     {{ $projects := where .Site.RegularPages "Section" "collection" }}
+    <!-- {{ $paginator := .Paginate (where .Pages "Section" "collection") }} -->
     {{ if ne $projects.Len 0 }}
         <div class="section pt-0">
             <div class="container">
-                <div class="row">
-                    {{ range $index, $card := $projects }}
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="row-custom-masonry">
+                    {{ $paginator := .Paginate (where .Pages "Section" "collection") }}
+
+                    <!-- {{ partial "framework/components/pagination-count.html" $paginator }} -->
+
+                    {{ range $card := $paginator.Pages }}
+                    <div class="item-custom-masonry">
                         {{ partial "theme/summary-piece.html" (dict "page" $card ) }}
                     </div>
                     {{ end }}
                 </div>
+                {{ partial "framework/components/paginator.html" . }}
             </div>
         </div>
     {{ end }}
