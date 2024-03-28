@@ -107,7 +107,7 @@ params:
     show_language_switcher_in_header: false
 
   menu:
-    show_dropdown_items_in_mobile_menu: false
+    show_dropdown_items_in_mobile_menu: true
     show_social_media_in_mobile_menu: true
 
   footer:
